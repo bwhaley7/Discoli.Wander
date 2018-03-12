@@ -1,9 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: ShieldPlugin.PluginCore
-// Assembly: Discoli.Wander, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 8B339FF5-D552-43F0-9881-095000766A95
-// Assembly location: C:\Users\brade\Downloads\Discoli.Wander.dll
-
+﻿
 using OQ.MineBot.GUI.Protocol.Movement.Maps;
 using OQ.MineBot.PluginBase;
 using OQ.MineBot.PluginBase.Base;
