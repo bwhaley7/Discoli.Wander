@@ -1,0 +1,7 @@
+C:\Users\brade\Desktop\Discoli.Wander\obj\Debug\Discoli.Wander.csproj.CoreCompileInputs.cache
+C:\Users\brade\Desktop\Discoli.Wander\bin\Debug\Discoli.Wander.dll
+C:\Users\brade\Desktop\Discoli.Wander\bin\Debug\Discoli.Wander.pdb
+C:\Users\brade\Desktop\Discoli.Wander\bin\Debug\OQ.MineBot.PluginBase.dll
+C:\Users\brade\Desktop\Discoli.Wander\obj\Debug\Discoli.Wander.csprojResolveAssemblyReference.cache
+C:\Users\brade\Desktop\Discoli.Wander\obj\Debug\Discoli.Wander.dll
+C:\Users\brade\Desktop\Discoli.Wander\obj\Debug\Discoli.Wander.pdb
