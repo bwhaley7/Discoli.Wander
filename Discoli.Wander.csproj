@@ -34,6 +34,7 @@
   <ItemGroup>
     <Compile Include="PluginCore.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Wander.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OQ.MineBot.PluginBase">
