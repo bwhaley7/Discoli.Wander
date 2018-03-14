@@ -15,7 +15,7 @@ using System;
 
 namespace ShieldPlugin
 {
-    [Plugin(1, "xSlapppz Wanderer", "A recode of Discolis Wanderer Plugin")]
+    [Plugin(1, "SpiffyAF Wanderer", "A recode of Discolis Wanderer Plugin")]
     public class PluginCore : IStartPlugin
   {
 
