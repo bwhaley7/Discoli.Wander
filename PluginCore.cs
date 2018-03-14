@@ -48,7 +48,7 @@ namespace ShieldPlugin
         {
             if (!botSettings.loadWorld)
             {
-                Console.WriteLine("[GankAura] 'Load world' must be enabled.");
+                Console.WriteLine("[Spiffy Wanderer] 'Load world' must be enabled.");
                 return new PluginResponse(false, "'Load world' must be enabled.");
             }
             
