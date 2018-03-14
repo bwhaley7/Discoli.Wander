@@ -35,7 +35,6 @@ namespace ShieldPlugin
             mapOptions.Quality = (SearchQuality)152;
             this.LowDetailOption = mapOptions;
             this.stopToken = new CancelToken();
-            Console.WriteLine("Issuing Constructor Call");
             return;
         }
 
@@ -57,22 +56,17 @@ namespace ShieldPlugin
                 this.ticks = 0;
                 if (player.physicsEngine.path != null && !player.physicsEngine.path.Complete && (player.physicsEngine.path.Valid || this.moving))
                 {
-                    Console.WriteLine("Returned");
                     return;
                 }
                 int num1 = Convert.ToInt32(((IEntity)player.status.entity).location.X) + Wander.rnd.Next(-10, 20);
                 int int32 = Convert.ToInt32(((IEntity)player.status.entity).location.Y);
                 int num2 = Convert.ToInt32(((IEntity)player.status.entity).location.Z) + Wander.rnd.Next(-10, 20);
-                Console.WriteLine("Pre Async");
                 IAsyncMap location = player.functions.AsyncMoveToLocation((ILocation)new Location(num1, (float)int32, num2), (IStopToken)this.stopToken, this.LowDetailOption);
-                Console.WriteLine("Post Async");
                 // ISSUE: method pointer
                 ((IAreaMap)location).Completed += OnPathReached;
                 // ISSUE: method pointer
                 ((IAreaMap)location).Cancelled += OnPathFailed;
-                Console.WriteLine("Pre Loc Start");
                 location.Start();
-                Console.WriteLine("Post Loc Start");
                 if (((IAreaMap)location).Valid)
                     player.functions.LookAtBlock((ILocation)new Location(num1, (float)int32, num2), false);
                 this.moving = true;
