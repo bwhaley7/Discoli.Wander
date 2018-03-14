@@ -15,23 +15,13 @@ using System;
 
 namespace ShieldPlugin
 {
-    [Plugin(1, "Discoli Wanderer", "Wanders around randomly to make people think bots are real players")]
+    [Plugin(1, "xSlapppz Wanderer", "A recode of Discolis Wanderer Plugin")]
     public class PluginCore : IStartPlugin
   {
 
-    public string GetName()
-    {
-      return "Wander";
-    }
-
-    public string GetDescription()
-    {
-      return "Aimlessly moves around tricking people into thinking these are real alts!";
-    }
-
     public string GetVersion()
     {
-      return "1.1";
+      return "2.0";
     }
 
     public override void OnLoad(int version, int subversion, int buildversion)

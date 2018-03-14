@@ -20,7 +20,7 @@ using OQ.MineBot.Protocols.Classes.Base;
 
 namespace ShieldPlugin
 {
-    class Wander : ITask
+    class Wander : ITask, ITickListener
     {
         private static Random rnd = new Random();
         public MapOptions LowDetailOption;
@@ -41,7 +41,7 @@ namespace ShieldPlugin
 
         public void OnStart()
         {
-            player.physicsEngine.onPhysicsPreTick += PhysicsEngine_onPhysicsPreTick;
+            Console.WriteLine("Starting Up Wanderer");
         }
 
         public override bool Exec()
@@ -49,16 +49,8 @@ namespace ShieldPlugin
             return !status.entity.isDead && !status.eating;
         }
 
-        private void PhysicsEngine_onPhysicsPreTick(IPlayer player)
+        public void OnTick()
         {
-            Console.WriteLine("PreTick started");
-            if (this.stopToken.stopped)
-            {
-                Console.WriteLine("Issue Method Pointer");
-                player.physicsEngine.onPhysicsPreTick += PhysicsEngine_onPhysicsPreTick;
-            }
-            else
-            {
                 if (player.status.entity.isDead)
                     return;
                 ++this.ticks;
@@ -87,7 +79,6 @@ namespace ShieldPlugin
                 if (((IAreaMap)location).Searched && ((IAreaMap)location).Complete && ((IAreaMap)location).Valid)
                     this.OnPathReached((IAreaMap)location);
             }
-        }
 
         private void OnPathReached(IAreaMap map)
         {
